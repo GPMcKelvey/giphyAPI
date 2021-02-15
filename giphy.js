@@ -32,7 +32,7 @@ function displayResults(gif){
     div.className = "carousel-item";
     let img = document.createElement("img");
     img.className = "d-block w-100";
-    img.src = gif.data[i].images.downsized.url;
+    img.src = gif.data[i].images.fixed_width_small.url;
 
     carousel.appendChild(div);
     div.appendChild(img);
