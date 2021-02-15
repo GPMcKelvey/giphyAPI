@@ -1,0 +1,23 @@
+body {
+    background: black;
+}
+
+label {
+    color: white;
+    font-family: "Audiowide", sans-serif;
+}
+
+button {
+    font-family: "Audiowide", sans-serif;
+}
+
+/* footer {
+    position:sticky;
+} */
+
+.formDiv {
+    margin: 5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
