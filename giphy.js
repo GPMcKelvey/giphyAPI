@@ -6,38 +6,50 @@ const searchTerm = document.querySelector(".search");
 const searchForm = document.querySelector("form");
 const submitBtn = document.querySelector("#submit");
 const carousel = document.querySelector(".carousel-inner");
-//const display = document.querySelector(".display");
-searchForm.addEventListener("submit", fetchResults);
 
+
+submitBtn.addEventListener("click", fetchResults);
 
 
 function fetchResults(e){
-    console.log(e); 
+    //console.log(e); 
+    removeResults();
     e.preventDefault(); 
     const term = searchTerm.value.replace(' ', '');
     url = `${baseURL}?api_key=${key}&q=${term}&limit=30&offset=5&rating=g&lang=en`;
-    console.log(url);
+    //console.log(url); 
+
 fetch(url)
     .then(response => response.json())
     .then(json => {
+       
+        displayResults(json); 
         
-        displayResults(json);
     });
+   
 };
 
 function displayResults(gif){
-    console.log(gif);
+    //console.log(gif);
     for(let i = 0; i < gif.data.length; i++){
     let div = document.createElement("div");
-    div.className = "carousel-item";
+    if (i == 0){
+        div.className = "carousel-item active";
+    } else{
+    div.className = "carousel-item";};
     let img = document.createElement("img");
     img.className = "d-block w-100";
     img.src = gif.data[i].images.fixed_width_small.url;
 
     carousel.appendChild(div);
     div.appendChild(img);
-    }
+    };
+    
 };
+ 
 
-
-
+function removeResults (){
+    
+    carousel.innerHTML = "";
+  
+};
