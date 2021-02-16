@@ -36,7 +36,7 @@ function displayResults(gif){
     if (i == 0){
         div.className = "carousel-item active";
     } else{
-    div.className = "carousel-item";};
+    div.className = "carousel-item"};
     let img = document.createElement("img");
     img.className = "d-block w-100";
     img.src = gif.data[i].images.original.url;
