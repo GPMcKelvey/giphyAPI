@@ -30,7 +30,7 @@ fetch(url)
 };
 
 function displayResults(gif){
-    //console.log(gif);
+    console.log(gif);
     for(let i = 0; i < gif.data.length; i++){
     let div = document.createElement("div");
     if (i == 0){
@@ -39,7 +39,7 @@ function displayResults(gif){
     div.className = "carousel-item";};
     let img = document.createElement("img");
     img.className = "d-block w-100";
-    img.src = gif.data[i].images.fixed_width_small.url;
+    img.src = gif.data[i].images.original.url;
 
     carousel.appendChild(div);
     div.appendChild(img);
