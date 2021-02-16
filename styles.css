@@ -21,3 +21,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
 }
+.title {
+    padding: 2em;
+    text-align: center;
+    color: white;
+    font-family: "Audiowide", sans-serif;
+
+}
