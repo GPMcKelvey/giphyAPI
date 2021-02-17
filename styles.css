@@ -18,8 +18,8 @@ footer {
 .formDiv {
     margin: 1em;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    justify-content: center;
 }
 
 h1 {
